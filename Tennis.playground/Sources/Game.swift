@@ -42,6 +42,21 @@ public class Game {
         gameIsEnded = isDeuce() ? isWonAdvance() : isWonBasic()
     }
     
+    fileprivate func getBasicScore() -> String {
+        return gameIsEnded ? "Won" : "\(Constants.tennisScores[player1.getScore()]) \(Constants.tennisScores[player2.getScore()])"
+    }
+    
+    fileprivate func getAdvanceScore() -> String {
+        let diff = getDiffScore()
+        if gameIsEnded {
+            return "won"
+        } else if diff == 0 {
+            return Constants.deuceResults[diff]
+        } else {
+            return "\(Constants.deuceResults[diff])"
+        }
+    }
+    
     // MARK: - Publics functions
     
     public func getGameIsEnded() -> Bool {
@@ -54,7 +69,7 @@ public class Game {
     }
     
     public func getCurrentGameScore() -> String {
-        return ""
+        return isDeuce() ? getAdvanceScore() : getBasicScore()
     }
     
     public init() { }

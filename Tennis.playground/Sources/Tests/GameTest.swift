@@ -26,6 +26,6 @@ public class GameTest: XCTestCase {
     
     func testGetCurrentGameScore() {
         XCTAssert(game.getCurrentGameScore().isEmpty == false)
-
+        XCTAssert(game.getCurrentGameScore() == "Love Love")
     }
 }

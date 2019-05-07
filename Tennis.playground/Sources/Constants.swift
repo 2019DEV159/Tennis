@@ -4,6 +4,6 @@ public enum Constants {
     static let maxIntervalDeuse: Int = 2
     
     static let tennisScores = ["Love", "Fifteen", "Thirty", "Forty"]
-    static let deuceResults = ["Deuce", "Advantage", "Won"]
+    static let deuceResults = ["Deuce", "Advantage"]
 }
 

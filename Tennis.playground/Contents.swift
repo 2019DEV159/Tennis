@@ -8,6 +8,7 @@ var game = Game()
 func playRandomGame() {
     while !game.getGameIsEnded() {
         game.play()
+        print(game.getCurrentGameScore())
     }
 }
 
