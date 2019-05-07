@@ -32,4 +32,38 @@ public class GameTest: XCTestCase {
         game.play(playerNbr: 1)
         XCTAssert(game.getPlayer(for: 1).getScore() == 1)
     }
+    
+    // Test Game is ended
+    func playTurn(with turns: [Int]) {
+        for turn in turns {
+            game.play(playerNbr: turn)
+        }
+    }
+    
+    func testGameIsEndedTurn1() {
+        playTurn(with: Constants.turns1)
+        XCTAssert(game.getGameIsEnded() == true)
+    }
+    
+    func testGameIsEndedTurn2() {
+        playTurn(with: Constants.turns2)
+        XCTAssert(game.getGameIsEnded() == true)
+    }
+    
+    func testGameIsEndedTurn3() {
+        playTurn(with: Constants.turns3)
+        XCTAssert(game.getGameIsEnded() == true)
+    }
+    
+    func testGameIsEndedTurn4() {
+        playTurn(with: Constants.turns4)
+        XCTAssert(game.getGameIsEnded() == true)
+    }
+    
+    func testGameIsEndedRandom() {
+        while !game.getGameIsEnded() {
+            game.play()
+        }
+        XCTAssert(game.getGameIsEnded() == true)
+    }
 }

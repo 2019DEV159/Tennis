@@ -5,5 +5,11 @@ public enum Constants {
     
     static let tennisScores = ["Love", "Fifteen", "Thirty", "Forty"]
     static let deuceResults = ["Deuce", "Advantage"]
+    
+    // Test case
+    public static let turns1 = [1, 1, 1, 1] // Player 1 wins
+    public static let turns2 = [2, 2, 2, 2] // Player 2 wins
+    public static let turns3 = [1, 2, 1, 2, 1, 2, 2, 2] // Deuce, Advantage Player 2, Player 2 wins
+    public static let turns4 = [1, 2, 1, 2, 1, 2, 1, 1] // Deuce, Advantage Player 1, Player 1 wins
 }
 
