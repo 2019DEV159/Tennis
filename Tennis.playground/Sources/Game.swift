@@ -53,6 +53,10 @@ public class Game {
         playerScored(player: getPlayer(for: randPlayer))
     }
     
+    public func getCurrentGameScore() -> String {
+        return ""
+    }
+    
     public init() { }
 }
 

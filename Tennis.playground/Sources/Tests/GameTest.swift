@@ -22,4 +22,10 @@ public class GameTest: XCTestCase {
     func testGetGameIsEnded() {
          XCTAssert(game.getGameIsEnded() == false)
     }
+    
+    
+    func testGetCurrentGameScore() {
+        XCTAssert(game.getCurrentGameScore().isEmpty == false)
+
+    }
 }
