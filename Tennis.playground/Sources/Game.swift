@@ -21,7 +21,7 @@ public class Game {
     // MARK: - Publics functions
     
     public func getGameIsEnded() -> Bool {
-        return true
+        return gameIsEnded
     }
     
     public func play() {
