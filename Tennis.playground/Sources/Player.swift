@@ -18,14 +18,15 @@ class Player {
     // MARK: - Publics functions
     
     func scored() {
+        score += 1
     }
     
     func getScore() -> Int {
-        return 98
+        return score
     }
     
     func getName() -> String {
-        return ""
+        return name
     }
 }
 
