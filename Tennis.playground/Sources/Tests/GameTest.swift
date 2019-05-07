@@ -23,9 +23,13 @@ public class GameTest: XCTestCase {
          XCTAssert(game.getGameIsEnded() == false)
     }
     
-    
     func testGetCurrentGameScore() {
         XCTAssert(game.getCurrentGameScore().isEmpty == false)
         XCTAssert(game.getCurrentGameScore() == "Love Love")
+    }
+    
+    func testPlay() {
+        game.play(playerNbr: 1)
+        XCTAssert(game.getPlayer(for: 1).getScore() == 1)
     }
 }

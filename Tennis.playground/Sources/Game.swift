@@ -76,6 +76,9 @@ public class Game {
         return isDeuce() ? getAdvanceScore() : getBasicScore()
     }
     
+    public func play(playerNbr: Int) {
+    }
+    
     public init() { }
 }
 
