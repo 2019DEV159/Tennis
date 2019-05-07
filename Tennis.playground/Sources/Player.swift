@@ -21,7 +21,7 @@ class Player {
     }
     
     func getScore() -> Int {
-        return 0
+        return 98
     }
     
     func getName() -> String {
