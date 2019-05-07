@@ -13,4 +13,9 @@ public class GameTest: XCTestCase {
     public override func tearDown() {
         // This method is called after the invocation of each test method in the class.
     }
+    
+    func testPlayRandom() {
+        game.play()
+        XCTAssert(game.getPlayer(for: 1).getScore() == 1 || game.getPlayer(for: 2).getScore() == 1)
+    }
 }

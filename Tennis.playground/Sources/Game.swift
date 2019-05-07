@@ -14,7 +14,15 @@ public class Game {
         player.scored()
     }
     
+    func getPlayer(for number: Int) -> Player {
+        return number == 1 ? player1 : player2
+    }
+    
     // MARK: - Publics functions
+    
+    public func play() {
+        
+    }
     
     public init() { }
 }
