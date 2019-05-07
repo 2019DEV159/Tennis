@@ -20,6 +20,10 @@ public class Game {
     
     // MARK: - Publics functions
     
+    public func getGameIsEnded() -> Bool {
+        return true
+    }
+    
     public func play() {
         let randPlayer = Int.random(in: 1 ... Constants.numberOfPlayer)
         playerScored(player: getPlayer(for: randPlayer))

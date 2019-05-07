@@ -18,4 +18,8 @@ public class GameTest: XCTestCase {
         game.play()
         XCTAssert(game.getPlayer(for: 1).getScore() == 1 || game.getPlayer(for: 2).getScore() == 1)
     }
+    
+    func testGetGameIsEnded() {
+         XCTAssert(game.getGameIsEnded() == false)
+    }
 }
