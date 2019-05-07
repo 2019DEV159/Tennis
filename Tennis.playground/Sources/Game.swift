@@ -77,6 +77,7 @@ public class Game {
     }
     
     public func play(playerNbr: Int) {
+        playerScored(player: getPlayer(for: playerNbr))
     }
     
     public init() { }
