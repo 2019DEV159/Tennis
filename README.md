@@ -40,3 +40,4 @@ By default 2 random games and four cases are run :
 - You can execute Tests in the Tennis.playground file by executing this lines : 
 `PlayerTest.defaultTestSuite.run()`
 `GameTest.defaultTestSuite.run()`
+`GameLogicTest.defaultTestSuite.run()`
