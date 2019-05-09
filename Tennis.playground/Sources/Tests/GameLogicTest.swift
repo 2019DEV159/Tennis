@@ -19,6 +19,9 @@ public class GameLogicTest: XCTestCase {
     }
     
     func testGameIsEnded() {
-        XCTAssert(logic.gameIsEnded() == false)
+        XCTAssert(logic.gameIsEnded(firstScore: 0, secondScore: 0) == false)
+        XCTAssert(logic.gameIsEnded(firstScore: 3, secondScore: 0) == false)
+        XCTAssert(logic.gameIsEnded(firstScore: 4, secondScore: 0) == true)
+        XCTAssert(logic.gameIsEnded(firstScore: 3, secondScore: 5) == true)
     }
 }
