@@ -5,6 +5,6 @@ class GameLogic {
     // MARK: - Public functions
 
     func isDeuce(firstScore: Int, secondScore: Int) -> Bool {
-        return false
+        return firstScore >= Constants.tennisScores.count-1 && secondScore >= Constants.tennisScores.count-1
     }
 }
