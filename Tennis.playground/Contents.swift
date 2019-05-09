@@ -3,6 +3,7 @@ import Foundation
 // Run Test
 PlayerTest.defaultTestSuite.run()
 GameTest.defaultTestSuite.run()
+GameLogicTest.defaultTestSuite.run()
 // =>
 
 // Game

@@ -6,6 +6,7 @@ public class Game {
     
     private var player1: Player = Player(name: "Player 1")
     private var player2: Player = Player(name: "Player 2")
+    private let logic: GameLogic = GameLogic()
     private var gameIsEnded: Bool = false
     
     // MARK: - Privates functions
@@ -15,17 +16,10 @@ public class Game {
         verifyScore()
     }
     
-    func getPlayer(for number: Int) -> Player {
-        return number == 1 ? player1 : player2
-    }
-    
     // Verify if players are deuce
-    fileprivate func isDeuce() -> Bool {
-        return player1.getScore() >= Constants.tennisScores.count-1 && player2.getScore() >= Constants.tennisScores.count-1
-    }
     
-    fileprivate func isWonBasic() -> Bool {
-        return player1.getScore() == Constants.tennisScores.count || player2.getScore() == Constants.tennisScores.count
+    fileprivate func isDeuce() -> Bool {
+        return logic.isDeuce(firstScore: player1.getScore(), secondScore: player2.getScore())
     }
     
     fileprivate func getDiffScore() -> Int {
@@ -34,12 +28,8 @@ public class Game {
         return diff
     }
     
-    fileprivate func isWonAdvance() -> Bool {
-        return getDiffScore() == Constants.maxIntervalDeuse
-    }
-    
     fileprivate func verifyScore() {
-        gameIsEnded = isDeuce() ? isWonAdvance() : isWonBasic()
+        gameIsEnded = logic.gameIsEnded(firstScore: player1.getScore(), secondScore: player2.getScore())
     }
     
     fileprivate func getBasicScore() -> String {
@@ -62,6 +52,10 @@ public class Game {
     }
     
     // MARK: - Publics functions
+    
+    func getPlayer(for number: Int) -> Player {
+        return number == 1 ? player1 : player2
+    }
     
     public func getGameIsEnded() -> Bool {
         return gameIsEnded
