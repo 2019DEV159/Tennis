@@ -17,4 +17,8 @@ public class GameLogicTest: XCTestCase {
         XCTAssert(logic.isDeuce(firstScore: 0, secondScore: 1) == false)
         XCTAssert(logic.isDeuce(firstScore: 3, secondScore: 3) == true)
     }
+    
+    func testGameIsEnded() {
+        XCTAssert(logic.gameIsEnded() == false)
+    }
 }
