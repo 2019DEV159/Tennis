@@ -24,7 +24,7 @@ public class Game {
     
     fileprivate func getDiffScore() -> Int {
         let value = abs(player1.getScore() - player2.getScore())
-        let diff = value > Constants.maxIntervalDeuse ? Constants.maxIntervalDeuse : value
+        let diff = value > Constants.maxIntervalDeuce ? Constants.maxIntervalDeuce : value
         return diff
     }
     
