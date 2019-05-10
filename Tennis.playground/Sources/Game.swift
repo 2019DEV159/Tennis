@@ -6,7 +6,6 @@ public class Game {
     
     private var player1: Player = Player(name: "Player 1")
     private var player2: Player = Player(name: "Player 2")
-    private let logic: GameLogic = GameLogic()
     private var gameIsEnded: Bool = false
     
     // MARK: - Privates functions
@@ -19,7 +18,7 @@ public class Game {
     // Verify if players are deuce
     
     fileprivate func isDeuce() -> Bool {
-        return logic.isDeuce(firstScore: player1.getScore(), secondScore: player2.getScore())
+        return GameLogic.shared.isDeuce(firstScore: player1.getScore(), secondScore: player2.getScore())
     }
     
     fileprivate func getDiffScore() -> Int {
@@ -29,7 +28,7 @@ public class Game {
     }
     
     fileprivate func verifyScore() {
-        gameIsEnded = logic.gameIsEnded(firstScore: player1.getScore(), secondScore: player2.getScore())
+        gameIsEnded = GameLogic.shared.gameIsEnded(firstScore: player1.getScore(), secondScore: player2.getScore())
     }
     
     fileprivate func getBasicScore() -> String {
